@@ -164,4 +164,3 @@ int _printf(const char *format, ...);
 - GitHub repository: ```holbertonschool-printf```
 
 [^](#table-of-contents)
-
