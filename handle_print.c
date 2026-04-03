@@ -19,8 +19,5 @@ int handle_print(const char *format, int *i, va_list list)
 	if (format[*i] == '%')
 		return (print_percent());
 
-	if (format[*i] == 'd' || format[*i] == 'i')
-		return (print_int(list));
-
 	return (_putchar('%') + _putchar(format[*i]));
 }
