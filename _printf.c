@@ -1,10 +1,35 @@
 #include "main.h"
 
 /**
-  * _printf - Afficher du texte dans le terminal avec les différent format disponible
-  * @format: Peut afficher %c , %s, %%
-  *
-  *Return: nombre de caractères affichés OU -1 si erreur
-  */
+ * _printf - produces output according to a format
+ * @format: format string
+ *
+ * Return: number of characters printed
+ */
+int _printf(const char *format, ...)
+{
+	int i = 0, count = 0;
+	va_list list;
 
+	if (!format)
+		return (-1);
 
+	va_start(list, format);
+
+	while (format[i])
+	{
+		if (format[i] == '%')
+		{
+			i++;
+			count += handle_print(format, &i, list);
+		}
+		else
+		{
+			count += _putchar(format[i]);
+		}
+		i++;
+	}
+
+	va_end(list);
+	return (count);
+}
