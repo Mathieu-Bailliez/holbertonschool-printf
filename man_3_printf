@@ -1,0 +1,21 @@
+.TH _PRINTF 3
+.SH NAME
+_printf
+
+.SH SYNOPSIS
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+_printf prints text to the standard output.
+
+It supports:
+c
+s
+%
+
+.SH RETURN VALUE
+Number of characters printed.
+
+.SH AUTHORS
+Mathieu Bailliez
+Ulysse Dewaleyne

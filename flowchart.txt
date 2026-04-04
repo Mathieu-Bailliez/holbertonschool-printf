@@ -1,0 +1,11 @@
+START
+read string
+if % then
+  check next char
+  if c → print char
+  if s → print string
+  if % → print %
+else
+  print char
+repeat
+END
